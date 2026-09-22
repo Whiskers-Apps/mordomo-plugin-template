@@ -4,6 +4,7 @@ import lib.Entry
 import lib.FormResults
 import lib.GetEntries
 import lib.OpenUrl
+import lib.Plugin
 import lib.PluginHandler
 import lib.RunAction
 import lib.ShowEntries
@@ -45,13 +46,26 @@ suspend fun main() {
                             )
                         )
                     ),
-                    Entry(title = "Meow crl. $searchText")
+                    Entry(title = "Custom Plugin Actions", actions = listOf(
+                        Plugin(
+                            text = "Send Notification",
+                            pluginId = "your-plugin-id",
+                            action = "send-notification",
+                        )
+                    )),
+                    Entry(title = "You got this on text. $searchText")
                 )
 
                 pluginHandler.sendEntries(entries)
             }
 
-            is RunAction -> {}
+            is RunAction -> {
+                when(message.actionId){
+                    "send-notification" -> {
+                        ProcessBuilder("notify-send", "Good Day", "Have a good day :D").start()
+                    }
+                }
+            }
             is FormResults -> {}
         }
     }
