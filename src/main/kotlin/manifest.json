@@ -1,0 +1,49 @@
+{
+  "id": "your-plugin-id",
+  "name": "Plugin Name",
+  "description": "Some plugin description",
+  "settings": [
+    {
+      "type": "text",
+      "id": "username",
+      "title": "Username",
+      "description": "Type your username",
+      "value": "XXlorem_ipsumXX"
+    },
+    {
+      "type": "number",
+      "id": "age",
+      "title": "Age",
+      "description": "Type your age",
+      "value": 25
+    },
+    {
+      "type": "check",
+      "id": "eula",
+      "title": "EULA",
+      "description": "Check to accept terms of agreement",
+      "value": true
+    },
+    {
+      "type": "select",
+      "id": "starter",
+      "title": "Starter",
+      "description": "Select your starter pokemon",
+      "defaultOptionId": "oshawott",
+      "options": [
+        {
+          "id": "oshawott",
+          "text": "Oshaaaaaaaaa"
+        },
+        {
+          "id": "tepig",
+          "text": "Tepig"
+        },
+        {
+          "id": "snivy",
+          "text": "Snivy"
+        }
+      ]
+    }
+  ]
+}
