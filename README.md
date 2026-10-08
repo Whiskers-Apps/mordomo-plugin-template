@@ -1,4 +1,7 @@
 # Plugin Template
+## Cloning
+Clone the repository into your ~/.local/share/mordomo/plugins
+
 ## Modifying
 Change the content of `manifest.json`. You will need a unique ID for the plugin.
 
