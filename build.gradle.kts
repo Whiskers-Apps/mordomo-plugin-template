@@ -15,9 +15,12 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
     implementation(libs.kotlinx.serialization.json)
-//    implementation("com.github.Whiskers-Apps:mordomo-core:0.1.1")
 
-    implementation("org.whiskersapps:mordomo-core:0.2.0")
+    // Repo
+    implementation("com.github.Whiskers-Apps:mordomo-core:1.0.1")
+
+// Local
+//    implementation("org.whiskersapps:mordomo-core:1.0.1")
 }
 
 kotlin {
